@@ -7,6 +7,16 @@ namespace ExemploPOO.Models
 {
     public class Pessoa
     {
+        //construtor sem passar o nome
+        public Pessoa()
+        {
+            
+        }
+        //Construtor passando nome
+        public Pessoa(string nome)
+        {
+            Nome = nome;
+        }
         public string Nome { get; set; }
         public int Idade { get; set; } 
         public string Email { get; set; }

@@ -42,3 +42,11 @@ ContaCorrente cc = new ContaCorrente();
 cc.Depositar(5000);
 cc.ExibisSaldo();
 
+//******* Usando Aluno e Professoar que herdam de Pessoa  *******
+Pessoa p2 = new Pessoa("Letícia");
+Professor pr1 = new Professor("Gisele");
+Aluno a2 = new Aluno("Fernanda");
+
+p2.Apresentar();
+pr1.Apresentar();
+a2.Apresentar();
