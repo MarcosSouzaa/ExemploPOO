@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 
 namespace ExemploPOO.Models
 {   
-    //professor herda de pessoa
+    // Exemplo de classe selada
+    // public sealed class Professor : Pessoa
+
+    //professor herda de pessoa    
      public class Professor : Pessoa
        {
+        public decimal Salario { get; set; }
 
         //construtor sem passar o nome
         public Professor()
@@ -20,5 +24,15 @@ namespace ExemploPOO.Models
           {
             
           }  
-        }        
+           // Método selado não pode ser reescrito
+           //public sealed override void Apresentar() 
+
+           //com override pode ser rescrito nas outras classes
+           public override void Apresentar() 
+        {
+            Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos\n" +
+                             $"e meu email é {Email}.\n");
+        } 
+       
+      }        
     }

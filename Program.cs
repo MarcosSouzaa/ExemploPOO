@@ -46,7 +46,9 @@ cc.ExibisSaldo();
 Pessoa p2 = new Pessoa("Letícia");
 Professor pr1 = new Professor("Gisele");
 Aluno a2 = new Aluno("Fernanda");
-
+Diretor d1 = new Diretor("Marcos");
+ 
 p2.Apresentar();
 pr1.Apresentar();
 a2.Apresentar();
+d1.Apresentar();
