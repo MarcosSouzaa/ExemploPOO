@@ -1,6 +1,7 @@
 ﻿// Exportando o Models com a classe
 using System.Security.Authentication;
 using System.Security.Cryptography;
+using ExemploPOO.Interfaces;
 using ExemploPOO.Models;
 
 //******* Criando um objeto p1 do tipo Pessoa estanciando a classe aqui **********
@@ -38,17 +39,32 @@ using ExemploPOO.Models;
 
 //******* Criando o objeto ContaCorrente que vai herdar da Classe Conta  *******
 
-ContaCorrente cc = new ContaCorrente();
-cc.Depositar(5000);
-cc.ExibisSaldo();
+// ContaCorrente cc = new ContaCorrente();
+// cc.Depositar(5000);
+// cc.ExibisSaldo();
 
-//******* Usando Aluno e Professoar que herdam de Pessoa  *******
-Pessoa p2 = new Pessoa("Letícia");
-Professor pr1 = new Professor("Gisele");
-Aluno a2 = new Aluno("Fernanda");
-Diretor d1 = new Diretor("Marcos");
+// //******* Usando Aluno e Professoar que herdam de Pessoa  *******
+// Pessoa p2 = new Pessoa("Letícia");
+// Professor pr1 = new Professor("Gisele");
+// Aluno a2 = new Aluno("Fernanda");
+// Diretor d1 = new Diretor("Marcos");
  
-p2.Apresentar();
-pr1.Apresentar();
-a2.Apresentar();
-d1.Apresentar();
+// p2.Apresentar();
+// pr1.Apresentar();
+// a2.Apresentar();
+// d1.Apresentar();
+
+// *********** Criando a classe Computador para mostrar a Class Object ***********
+
+//Computador comp = new Computador();
+//Se eu marcar um dos métodos que o obj chama e apertar F12
+//Ele me mostra a implementação de todos métodos da classe mãe Object 
+//Console.WriteLine(comp.ToString());
+
+//**********Criando um objeto a partir da Classe que implementa uma interface
+
+ICalculadora calc = new Calculadora();
+Console.WriteLine(calc.Somar(10,20));
+Console.WriteLine(calc.Multiplicar(9,5));
+Console.WriteLine(calc.Dividir(81, 9));
+Console.WriteLine(calc.Subtrair(81, 9));
